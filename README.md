@@ -43,7 +43,7 @@ Whenever we are creating pipeline, it is best practice to test application local
 
 - Clone/Fork the Repo. 
     ```
-    git clone https://github.com/infosecsingh/Flask-App-GitHub-Actions-ArgoCD.git
+    git clone https://github.com/farazii1159/Flask-App-GitHub-Actions-ArgoCD.git
     cd Flask-App-GitHub-Actions-ArgoCD
     ```
 - Install Dependence
@@ -89,7 +89,7 @@ CMD ["python", "app.py"]
 #### Lets Build and Run the Container
 1. Build the Image: Run the following in the directory containing your Dockerfile:
 ```
-docker build -t 1nfosecsingh/demo-app:v1 .
+docker build -t farazii1159/demo-app:v1 .
 ```
 Note: you need to change the name of your image, according to your dockerhub username.
 
@@ -159,12 +159,12 @@ Note: you need to change the name of your image, according to your dockerhub use
         # Build the Docker Image
         - name: Build Docker Image
             run: |
-            docker build . -t 1nfosecsingh/demo-app:${{ env.VERSION }} 
+            docker build . -t farazii1159/demo-app:${{ env.VERSION }} 
         
         # Push the Docker Image
         - name: Push Docker Image
             run: |
-            docker push 1nfosecsingh/demo-app:${{ env.VERSION }}
+            docker push farazii1159/demo-app:${{ env.VERSION }}
         
         # UPdate the K8s Manifest Files
         - name: Update K8s Manifests
@@ -176,11 +176,11 @@ Note: you need to change the name of your image, according to your dockerhub use
         # Update Github
         - name: Commit the changes
             run: |
-            git config --global user.email "<infosecsingh@gmail.com>"
+            git config --global user.email "<farazii1159@gmail.com>"
             git config --global user.name "GitHub Actions Bot"
             git add deploy/deploy.yaml
             git commit -m "Update deploy.yaml with new image version - ${{ env.VERSION }}"
-            git remote set-url origin https://github-actions:${{ secrets.GITHUB_TOKEN }}@github.com/infosecsingh/Flask-App-GitHub-Actions-ArgoCD.git
+            git remote set-url origin https://github-actions:${{ secrets.GITHUB_TOKEN }}@github.com/farazii1159/Flask-App-GitHub-Actions-ArgoCD.git
             git push origin master
     ```
 
