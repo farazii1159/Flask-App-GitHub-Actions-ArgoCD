@@ -335,3 +335,12 @@ Output
 Application running on http://172.29.213.129:30008
 
 ![alt text](imgs/application.png)
+
+---
+
+## 👨‍💻 Author
+
+**Faraz Shabbir**
+
+- GitHub: https://github.com/farazii1159
+- LinkedIn: https://linkedin.com/in/your-linkedin
